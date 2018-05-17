@@ -11,11 +11,7 @@ $filename='SC.db';
 $dsn="$dbms:/../$filename";
 try {
 $dbh = new PDO($dsn/*,user, $pass*/); //初始化一个PDO对象
-    /*你还可以进行一次搜索操作
-    foreach ($dbh->query('SELECT * from FOO') as $row) {
-        print_r($row); //你可以用 echo($GLOBAL); 来看到这些值
-    }
-    */
+
 } catch (PDOException $e) {
     die ("Error!: " . $e->getMessage() . "<br/>");
 }
