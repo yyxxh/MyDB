@@ -5,7 +5,7 @@ $psw=$_POST['psw'];
 $sql="select * from user where uname='$user'";
 $sth=$dbh->query($sql);
 $row=$sth->fetch();
-echo $row[1];
 if($row[2]!=$psw)
-  echo '密码错误！';
- 
+  echo '<script>alert("密码错误");history.go(-1);</script>';   
+else
+  print_r("欢迎您，$row[1]");
