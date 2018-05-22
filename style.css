@@ -1,0 +1,17 @@
+
+.login-header { grid-area: header; }
+.login-footer { grid-area: footer; }
+.login-label { grid-area:label; display: flex; justify-content:flex-end;}
+.login-txt { grid-area:txt;display: flex; justify-content:flex-start; }
+.login{
+    display:grid;
+    justify-items: center;
+    /*justify-content: center;*/
+    align-items: center;
+    /*align-content: center;*/
+    grid-template-columns:2fr 1fr 1fr 2fr;
+    grid-template-rows:repeat(3,1fr);
+    grid-template-areas: "header header header header"
+                        ". label txt ."
+                        "footer footer footer footer";    
+}
